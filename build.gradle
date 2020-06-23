@@ -99,6 +99,13 @@ task ios(type: Test) {
     systemProperty 'platform', 'ios'
 }
 
+task order(type: Test) {
+    useJUnitPlatform {
+        includeTags 'order'
+    }
+    systemProperty 'platform', 'web'
+}
+
 help {
     doFirst {
         println ""
